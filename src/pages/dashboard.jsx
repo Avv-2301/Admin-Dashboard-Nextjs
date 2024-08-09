@@ -6,7 +6,7 @@ const dashboard = () => {
   return (
     <div>
         <div className='flex flex-row items-center justify-between space-y-2'>
-            <p className='text-3xl font-bold tracking-tight'>Dashboard</p>
+            <h2 className='text-2xl font-bold tracking-tight'>Dashboard</h2>
         </div>
         <Tabs defaultValue='account' className='w-[500px]'>
             <TabsList >
