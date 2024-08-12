@@ -1,27 +1,28 @@
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode } from "react";
 import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
-  } from "@/components/ui/sheet";
+  Sheet,
+  SheetContent,
+  SheetTitle,
+} from "@/components/ui/sheet";
+import { useRouter } from "next/router";
 
-  type RootLayoutProps = {
-    children: ReactNode;
-  };
+type RootLayoutProps = {
+  children: ReactNode;
+};
 
-  const RootLayout: React.FC<RootLayoutProps> = () => {
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
+
+  const router = useRouter();
+  const { pathname } = router;
   return (
-    <div>
-        <Sheet>
-            <SheetContent side='top'>
-                <SheetTitle>BiGamer Dashboard</SheetTitle>
-            </SheetContent>
-        </Sheet>
-    </div>
+    <>
+      {pathname === "/login" ? <div className="grid min-h-screen w-full">{children}</div> :
+        <>
+        
+        </>
+      }
+    </>
   )
 }
 
-export default RootLayout
+export default RootLayout;
