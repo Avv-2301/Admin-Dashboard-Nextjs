@@ -7,8 +7,8 @@ import { useRouter } from "next/router";
 import {
   Bell,
   Gamepad2,
-  BookText,
-  CircleUser,
+  Grid2X2,
+  PackageOpen ,
   Home,
   LineChart,
   Menu,
@@ -17,6 +17,7 @@ import {
   Search,
   SquareTerminal,
   Users,
+  Box,
 } from "lucide-react";
 
 type RootLayoutProps = {
@@ -42,7 +43,27 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
                 </div>
                 <div className="flex-1">
                   <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
-                    {/* LINKS HERE FOR LARGE VIEW */}
+                    <Link
+                    href={'/dashboard'}
+                    className={`flex items-center gap-3 rounded-lg transition-all hover:text-primary px-3 py-2 ${pathname?.includes("dashboard") ? "bg-muted text-primary" : "text-muted-foreground"} `}
+                    >
+                    <Home className="h-4 w-4"/>
+                    Dashboard {" "}
+                    </Link>
+                    <Link
+                    href={'/addcategory'}
+                    className={`flex items-center gap-3 rounded-lg transition-all hover:text-primary px-3 py-2 ${pathname?.includes("addcategory") ? "bg-muted text-primary" : "text-muted-foreground"} `}
+                    >
+                    <Grid2X2 className="h-4 w-4"/>
+                    Add Category {" "}
+                    </Link>
+                    <Link
+                    href={'/addgame'}
+                    className={`flex items-center gap-3 rounded-lg transition-all hover:text-primary px-3 py-2 ${pathname?.includes("addgame") ? "bg-muted text-primary" : "text-muted-foreground"} `}
+                    >
+                    <PackageOpen className="h-4 w-4"/>
+                    Add Game {" "}
+                    </Link>
                   </nav>
                 </div>
               </div>
@@ -71,9 +92,25 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
                       </Link>
                       <Link
                       href={'/users'}
-                      className=""
+                      className={`flex items-center gap-3 rounded-lg transition-all hover:text-primary px-3 py-2 ${pathname?.includes("blogs") ? "bg-muted text-primary" : "text-muted-foreground"} `}
                       >
-                      
+                      <Users className="h-4 w-4"/>
+                      Users {" "}
+                      </Link>
+
+                      <Link
+                      href={'/addcategory'}
+                      className={`flex items-center gap-3 rounded-lg transition-all hover:text-primary px-3 py-2 ${pathname?.includes("addcategory") ? "bg-muted text-primary" : "text-muted-foreground"} `}
+                      >
+                        <Grid2X2 className="h-4 w-4"/>
+                        Category{" "}
+                      </Link>
+                      <Link
+                      href={'/addgame'}
+                      className={`flex items-center gap-3 rounded-lg transition-all hover:text-primary px-3 py-2 ${pathname?.includes("addgame") ? "bg-muted text-primary" : "text-muted-foreground"} `}
+                      >
+                      <PackageOpen  className="h-4 w-4"/>
+                      Add Game
                       </Link>
                     </nav>
                     </SheetContent>
