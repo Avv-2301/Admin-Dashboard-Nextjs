@@ -8,13 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  CalendarClock,
-  Keyboard,
-  NotebookText,
-  Users,
-  CalendarIcon,
-} from "lucide-react";
+import { User } from "lucide-react";
 
 const dashboard = () => {
   return (
@@ -27,70 +21,50 @@ const dashboard = () => {
           <TabsTrigger value="account">Account</TabsTrigger>
           <TabsTrigger value="password">Password</TabsTrigger>
         </TabsList>
-        <TabsContent value="account" className="space-y-4">
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <TabsContent value="account">
+          <div className='flex flex-row justify-between mt-4'>
             <Card>
-              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">
+              <CardHeader className="flex flex-row items-center space-y-0 pb-2 gap-4">
+                <CardTitle className="text-lg font-medium">
                   Total Users
                 </CardTitle>
-                <Users className="ml-2 h-4 w-4" />
+                <User className="ml-2 h-4 w-4" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">50</div>
               </CardContent>
             </Card>
             <Card>
-              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">
-                  Total Prompts
+              <CardHeader className="flex flex-row items-center space-y-0 pb-2 gap-4">
+                <CardTitle className="text-lg font-medium">
+                  Total Users
                 </CardTitle>
-                <Keyboard className="ml-2 h-4 w-4" />
+                <User className="ml-2 h-4 w-4" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">50</div>
               </CardContent>
             </Card>
             <Card>
-              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">
-                  Total Blogs
+              <CardHeader className="flex flex-row items-center space-y-0 pb-2 gap-4">
+                <CardTitle className="text-lg font-medium">
+                  Total Users
                 </CardTitle>
-                <NotebookText className="ml-2 h-4 w-4" />
+                <User className="ml-2 h-4 w-4" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">50</div>
               </CardContent>
             </Card>
             <Card>
-              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">
-                  Today Registered
+              <CardHeader className="flex flex-row items-center space-y-0 pb-2 gap-4">
+                <CardTitle className="text-lg font-medium">
+                  Total Users
                 </CardTitle>
-                <CalendarClock className="ml-2 h-4 w-4" />
+                <User className="ml-2 h-4 w-4" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">
-                  50
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
-            <Card className="col-span-4">
-              <CardHeader>
-                <CardTitle>No Of Prompts</CardTitle>
-              </CardHeader>
-              <CardContent className="pl-2">
-                {/* <Overview/> */}
-              </CardContent>
-            </Card>
-            <Card className="col-span-6 md:col-span-3 h-[460px] lg:h-[460px] md:h-[230px] overflow-y-auto">
-              <CardHeader>
-                <CardTitle>Recent Prompts</CardTitle>
-              </CardHeader>
-              <CardContent>
-                {/* <RecentSales/> */}
+                <div className="text-2xl font-bold">50</div>
               </CardContent>
             </Card>
           </div>
